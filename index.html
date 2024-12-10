@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hawthorn Civil and Mining Services</title>
+    <title>Inti Group</title>
+    <link rel="icon" type="image/jpg" href="./img/LinkedinProfile.jpg">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            overflow-x : hidden;
         }
         .navbar {
             background-color: #333;
@@ -16,40 +19,52 @@
             position: fixed;
             width: 100%;
             top: 0;
+            display: flex;
+            align-items: center;
+            padding: 0px;
+            margin: 0px;
+            height : 70px;
+            z-index : 1000;
+        }
+        .navbar img {
+            height: 70px;
+            margin-right: 10px;
+        }
+        .navbar .nav-items {
+            display: flex;
+            margin-left: auto;
         }
         .navbar a {
-            float: left;
             display: block;
             color: #f2f2f2;
             text-align: center;
             padding: 14px 20px;
             text-decoration: none;
-            height: 60px;
-            line-height: 100px;
-            text-align: center;
         }
         .navbar a:hover {
             background-color: #ddd;
             color: black;
         }
         .section {
-            padding: 60px 20px;
-            height: 80vh;
+            padding: 80px 20px;
+            height: 80vh; 
         }
         #home {
             padding-top:200px;
             background-color: #f4f4f4;
         }
+        #services{
+            background-color: #cccccc;
+        }
         #about {
-            padding-top:200px;
             background-color: #e2e2e2;
         }
-        #services {
-            padding-top:200px;
+        #aboriginal {
             background-color: #cccccc;
         }
         #contact {
-            padding-top:200px;
+            height: 250px;
+            padding-top:20px;
             background-color: #b2b2b2;
         }
         .contact {
@@ -57,54 +72,113 @@
             justify-content: space-around;
         }
 
+        .meetusitems{
+            padding: 5px 0px 5px 0px;
+        }
 
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .animate-text {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .animate-logo {
+            animation: slideIn 2s ease-in-out;
+        }
+
+        .animate-logo:hover {
+            animation: pulse 0.5s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
     </style>
 </head>
 <body>
     <div class="navbar">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
+        <img src="./img/LinkedinProfile.jpg" alt="Logo">
+        <div class="nav-items">
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#aboriginal">Aboriginal Engagement</a>
+            <a href="#contact">Contact Us</a>
+        </div>
     </div>
-
-    <div id="home" class="section">
-        <h1>Home</h1>
-        <p>Welcome to HCMS website</p>
+    <div id="home" class="section" style="display: flex; align-items: center; justify-content: space-around;">
+        <h1 class="animate-text" style="padding-top: 20px;">Welcome to Inti Group's website</h1>
+        <img src="./img/LinkedinProfile.jpg" alt="Logo" class="animate-logo" style="height: 200px; margin-right: 20px;">
     </div>
 
     <div id="about" class="section">
-        <h1>About</h1>
-        <p>Learn more about us.</p>
+        <h1>About Us</h1>
+        <p>Welcome to Inti Group's website</p>
     </div>
 
     <div id="services" class="section">
-        <h1>Services</h1>
-        <p>Discover our services.</p>
+        <h1>Our Services</h1>
+        <p>Learn more about us.</p>
+    </div>
+
+    <div id="aboriginal" class="section">
+        <h1>Aboriginal Engagement</h1>
     </div>
 
     <div id="contact" class="section">
         <h1>Contact</h1>
-        <p>Get in touch with us.</p>
 
         <div class="contact">
-
             <div>
                <h3>Meet Us</h3>
+               <div class="meetusitems">2 Oswald St</div>
+               <div class="meetusitems">Victoria Park</div>
+               <div class="meetusitems">WA 6100</div>
             </div>
             <div>
                 <h3>Contact Us</h3>
+                <div style="margin-bottom: 10px;">(08) 6165 8828</div>
+                <div>info@hawthorncs.com.au</div>
             </div>
             <div>
-                <h3>
-                    Follow Us
-                </h3>
+                <h3>Follow Us</h3>
+                <a href="https://www.linkedin.com/company/hawthorn-construction-services" target="_blank" style="text-decoration: none; color: #0e76a8;">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+
             </div>
         </div>
 
-        <!-- https://www.linkedin.com/company/hawthorn-construction-services -->
 
     </div>
 
+
+    <footer style="background-color: #333; color: #fff; text-align: center; padding: 10px 0;">
+        <p>&copy; 2024 Hawthorn Civil and Mining Services. All rights reserved.</p>
+    </footer>
 </body>
 </html>
