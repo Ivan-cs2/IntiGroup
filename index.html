@@ -1397,6 +1397,29 @@ wp.i18n.setLocaleData( { 'text directionltr': [ 'ltr' ] } );
 
 <script src="wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.26.4" id="elementor-frontend-js"></script>
 <script src="wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.26.1" id="pro-elements-handlers-js"></script>
-
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+	  document.querySelectorAll("img, script, link").forEach(el => {
+		if (el.src && el.src.startsWith("/wp-content/")) {
+		  el.src = "https://ivan-cs2.github.io/IntiGroup" + el.src;
+		}
+		if (el.href && el.href.startsWith("/wp-content/")) {
+		  el.href = "https://ivan-cs2.github.io/IntiGroup" + el.href;
+		}
+		if (el.src && el.src.startsWith("/wp-includes/")) {
+		  el.src = "https://ivan-cs2.github.io/IntiGroup" + el.src;
+		}
+		if (el.href && el.href.startsWith("/wp-includes/")) {
+		  el.href = "https://ivan-cs2.github.io/IntiGroup" + el.href;
+		}
+		if (el.src && el.src.startsWith("/wp-cdn-cgi/")) {
+		  el.src = "https://ivan-cs2.github.io/IntiGroup" + el.src;
+		}
+		if (el.href && el.href.startsWith("/wp-cdn-cgi/")) {
+		  el.href = "https://ivan-cs2.github.io/IntiGroup" + el.href;
+		}
+	  });
+	});
+  </script>
 </body>
 </html>
