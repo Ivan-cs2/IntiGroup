@@ -1,0 +1,106 @@
+/*
+ Theme Name:   Hello Elementor Child
+ Template:     hello-elementor
+*/
+html, body {
+    overflow-x: hidden;
+}
+/* Contact-form */
+
+input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.Name, input.wpcf7-form-control.wpcf7-email.wpcf7-validates-as-required.wpcf7-text.wpcf7-validates-as-email, input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required { width: 100vw; max-width: 1100px; height: 55px; background-color:#F0F0F0!important; border:0; outline:0; }
+
+textarea.wpcf7-form-control.wpcf7-textarea { width: 100vw; max-width: 1100px; background-color:#F0F0F0!important; border:0; outline:0; }
+
+input.wpcf7-form-control.wpcf7-submit.has-spinner.btn { width: 100vw; max-width: 1100px; background-color: #5BA0E4; outline: 0; border: 0; }
+body #content .contact_form .wpcf7-form label, body #content .elementor-shortcode .wpcf7-form textarea, body #content .contact_form .wpcf7-form input { width: 100%;}
+.contact_form { width: 100%; }
+
+
+.wpcf7-response-output {
+    width: 100vw;
+    max-width: 580px;
+}
+
+#cb-menu .menu-item {
+    border-bottom: 1px solid white;
+}
+#cb-menu .menu-item::before {
+    content: '';
+    width: 10%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    background-image: url(https://staging.devcustomprojects.com/hawthorncs/wp-content/uploads/2024/07/Symbol.png);
+    background-repeat: no-repeat;
+    /* right: 0; */
+    left: 90%;
+    top: 40%;
+	cursor: pointer;
+}
+
+.img-div .post_image {
+    width: 100%;
+    height: 100vw;
+    object-fit: cover;
+    object-position: center;
+    clip-path: polygon(50% 0%, 100% 0, 100% 80%, 75% 100%, 0 100%, 0% 60%, 0 0);
+    max-height: 567px;
+}
+.project-feature a { width: 100%; }
+
+/*Map*/
+#map { width: 100%; }
+#map .map-content > * { margin: 0; }
+#map .map-content p { line-height: 1.5; }
+#map iframe + div { border: 0 !important; }
+#map .map-content h4 { font-size: 21px; line-height: 1.2; }
+body:is(.single-project) #map .map-content a { pointer-events: none; }
+#map [title="Close"] { width: auto !important; height: auto !important; }
+#map .map-content p:not(.project-info) { font-size: 13px; font-weight: 400; }
+#map [title="Close"] > span { width: 18px !important; height: 18px !important; }
+#map div:has(>[title="Close"]) { top: 0; right: 0; position: absolute; background: #fff; }
+
+#map [src$="/map/logo.svg"] { width: 20px !important; height: 20px !important; position: unset !important; }
+#map [src$="/map/favicon.svg"] { background: #fff; padding: 8px !important; border: 2px solid #5ba0e4 !important; border-radius: 100px; }
+#map :has(>[src$="/map/logo.svg"]) { display: flex; align-items: center; background: #fff; border-radius: 100px; justify-content: center; border: 2px solid #5ba0e4 !important; }
+
+#map .map-content a { color:#000; }
+#map .map-content svg { height: 15px; }
+#map .map-content { max-width: 300px; }
+#map .map-content > :not(img) { padding: 0 15px; }
+#map .map-content > :last-child { margin-top: 5px; }
+#map .gm-style-iw-d:has(.map-content) { margin-right: -18px; }
+#map .gm-style-iw.gm-style-iw-c:has(.map-content) { padding: 0; }
+#map .map-content .project-info > * { gap: 5px; display: flex; align-items: center; }
+#map .map-content img { width: 100%; height: 150px; max-width: 100%; margin-bottom: 10px; }
+#map .map-content .project-info { font-size: 15px; font-weight: 500; display: flex; align-items: center; justify-content: space-between; }
+#map .map-content .project-info a, #map .map-content .project-info svg, #map .map-content .project-info span { fill: #0b163b; color: #0b163b; }
+/*#map .map-content .client-value { color: #000; display: flex; font-weight: 500; align-items: center; justify-content: space-between; }*/
+
+
+.custom-map * { outline:0; }
+.custom-map { position: relative; }
+body:is(.single-project) #map { height: 500px; }
+body:is(.post-type-archive-project) #map { height: 100vh; }
+[data-elementor-type="single-post"] > .elementor-element:has(#map) { padding: 0; }
+/*body:is(.single-project) #map { height: 500px; margin: 0 auto; max-width: 1320px; }*/
+.custom-map #project-map-destination { top: 0; right: 0; display: none; z-index: 1; width: 100%; position: absolute; }
+
+#project-map-destination * { border: 0; }
+#project-map-destination input { box-shadow: 0 0 0 1px #e7e7e7; }
+#project-map-destination { display: flex; align-items: center; margin-bottom: 15px; justify-content: end; }
+#project-map-destination button { font-size: 15px; font-weight: 400; letter-spacing: .5px; background: #5ba0e4; }
+
+
+/*Loader*/
+.loader { border: 4px solid #f3f3f3; border-top: 4px solid #3498db; border-radius: 50%; width: 50px; height: 50px; animation: spin 2s linear infinite; }
+.loader-container { display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; position: absolute; top: 0; left: 0; background-color: rgba(255, 255, 255, 0.8); z-index: 999; background:#fff; }
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.pdf-btn a { color: white !important; } 
+.pdf-btn a:hover { color: white; }
+.certification-text a { color: blue !important; }
